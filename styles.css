@@ -1,0 +1,42 @@
+.dm-popout-btn-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 12px;
+    z-index: 10000;
+}
+
+.dm-popout-btn {
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.2s;
+    position: relative;
+    z-index: 10000;
+    min-width: 36px;
+    min-height: 36px;
+    box-shadow: 2px 2px 0 #FFF;
+}
+
+.dm-popout-btn:hover {
+    background-color: #1A1A1A;
+}
+
+.dm-popout-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+.dm-popout-btn svg {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 10001;
+    fill: white;
+} 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter DM</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="dm-container">
+        <div class="dm-header">
+            <div class="dm-title">Messages</div>
+            <div class="window-controls">
+                <button id="minimizeBtn" class="window-control-btn" title="Minimize">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M20 14H4v-2h16v2z"/>
+                    </svg>
+                </button>
+                <button id="maximizeBtn" class="window-control-btn" title="Maximize">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M3 3v10h10V3H3zm9 9H4V4h8v8z"/>
+                    </svg>
+                </button>
+                <button id="closeBtn" class="window-control-btn" title="Close">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="dm-search-container">
+            <div class="search-wrapper">
+                <svg viewBox="0 0 24 24" width="16" height="16" class="search-icon">
+                    <path fill="currentColor" d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"/>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search Direct Messages">
+            </div>
+            <button class="new-message-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M23 11h-6V5c0-.552-.448-1-1-1s-1 .448-1 1v6H9c-.552 0-1 .448-1 1s.448 1 1 1h6v6c0 .552.448 1 1 1s1-.448 1-1v-6h6c.552 0 1-.448 1-1s-.448-1-1-1z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="dm-content">
+            <!-- Conversations List View -->
+            <div class="conversations-list" id="conversationsList">
+                <!-- Conversations will be inserted here -->
+            </div>
+
+            <!-- Chat View (initially hidden) -->
+            <div class="chat-view hidden" id="chatView">
+                <div class="chat-header">
+                    <button class="back-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M20 11H7.414l4.293-4.293a1 1 0 00-1.414-1.414l-6 6a1 1 0 000 1.414l6 6a1 1 0 001.414-1.414L7.414 13H20a1 1 0 000-2z"/>
+                        </svg>
+                    </button>
+                    <div class="chat-info">
+                        <div class="chat-name"></div>
+                    </div>
+                </div>
+                <div class="messages" id="messageContainer">
+                    <!-- Messages will be inserted here -->
+                </div>
+                <div class="dm-input-container">
+                    <textarea 
+                        class="dm-input" 
+                        placeholder="Start a new message"
+                        rows="1"
+                        id="messageInput"
+                    ></textarea>
+                    <button class="dm-send-btn" id="sendButton">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M2.105 19.697L22 12 2.105 4.303l.012 6.196L18 12l-15.883 1.501z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
